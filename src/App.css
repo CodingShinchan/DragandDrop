@@ -1,0 +1,119 @@
+body {
+  font-family: 'Roboto', sans-serif;
+  background-color: #f9fafb;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-size: 2.5rem;
+  color: #333;
+  text-align: center;
+  margin: 20px 0;
+  font-weight: bold;
+}
+
+.app-container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #fff;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+  border-radius: 12px;
+  transition: all 0.3s ease;
+}
+
+.task-list-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.task-block {
+  background-color: #f4f4f4;
+  border-radius: 12px;
+  padding: 10px;
+  width: 22%;
+  min-height: 350px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.task-block:hover {
+  transform: scale(1.05);
+  background-color: #e3f2fd;
+}
+
+.task-block h2 {
+  font-size: 1.5rem;
+  margin-bottom: 10px;
+  color: #007bff;
+  text-align: center;
+}
+
+.task-card {
+  background-color: #ffffff;
+  border-radius: 8px;
+  padding: 10px;
+  margin-bottom: 12px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+  cursor: grab;
+  font-size: 1.1rem;
+  color: #333;
+  text-align: center;
+}
+
+.task-card:hover {
+  background-color: #e7f1ff;
+}
+
+.task-card:active {
+  transform: scale(1.02);
+}
+
+.task-card.dragging {
+  background-color: #d1e7ff;
+  opacity: 0.6;
+}
+
+.task-block.hover {
+  background-color: #b3e5fc;
+}
+
+@media (max-width: 1024px) {
+  .task-block {
+    width: 48%;
+  }
+}
+
+@media (max-width: 768px) {
+  .task-block {
+    width: 100%;
+    margin-bottom: 20px;
+  }
+
+  h1 {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .app-container {
+    padding: 15px;
+  }
+
+  h1 {
+    font-size: 1.8rem;
+  }
+
+  .task-card {
+    font-size: 1rem;
+  }
+
+  .task-block {
+    min-height: 250px;
+  }
+}
